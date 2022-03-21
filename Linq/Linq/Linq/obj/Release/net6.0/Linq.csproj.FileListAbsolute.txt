@@ -1,0 +1,5 @@
+C:\Users\ilupa\Desktop\Lucru\Internship\Linq\Linq\Linq\obj\Release\net6.0\Linq.csproj.AssemblyReference.cache
+C:\Users\ilupa\Desktop\Lucru\Internship\Linq\Linq\Linq\obj\Release\net6.0\Linq.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ilupa\Desktop\Lucru\Internship\Linq\Linq\Linq\obj\Release\net6.0\Linq.AssemblyInfoInputs.cache
+C:\Users\ilupa\Desktop\Lucru\Internship\Linq\Linq\Linq\obj\Release\net6.0\Linq.AssemblyInfo.cs
+C:\Users\ilupa\Desktop\Lucru\Internship\Linq\Linq\Linq\obj\Release\net6.0\Linq.csproj.CoreCompileInputs.cache
