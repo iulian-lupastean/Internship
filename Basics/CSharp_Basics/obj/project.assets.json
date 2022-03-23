@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ilupa\\Desktop\\Assignment2\\CSharp_Basics\\CSharp_Basics\\CSharp_Basics.csproj",
+      "projectUniqueName": "C:\\Users\\ilupa\\Desktop\\Lucru\\Internship\\Basics\\CSharp_Basics\\CSharp_Basics.csproj",
       "projectName": "CSharp_Basics",
-      "projectPath": "C:\\Users\\ilupa\\Desktop\\Assignment2\\CSharp_Basics\\CSharp_Basics\\CSharp_Basics.csproj",
+      "projectPath": "C:\\Users\\ilupa\\Desktop\\Lucru\\Internship\\Basics\\CSharp_Basics\\CSharp_Basics.csproj",
       "packagesPath": "C:\\Users\\ilupa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ilupa\\Desktop\\Assignment2\\CSharp_Basics\\CSharp_Basics\\obj\\",
+      "outputPath": "C:\\Users\\ilupa\\Desktop\\Lucru\\Internship\\Basics\\CSharp_Basics\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ilupa\\AppData\\Roaming\\NuGet\\NuGet.Config",

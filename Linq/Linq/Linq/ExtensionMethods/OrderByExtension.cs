@@ -9,19 +9,19 @@ namespace Linq.ExtensionMethods
 {
     public static class OrderByExtension
     {
-        public static void OrderByFirstName(this IEnumerable<Student> student)
+        public static void OrderByFirstName(this IEnumerable<Laptop> laptops)
         {
-            var orderByFirstName = student.OrderBy(x => x.FirstName).ToList();
-            foreach (var item in orderByFirstName)
+            var orderByDiagonal = laptops.OrderBy(x => x.ScreenDiagonal).ToList();
+            foreach (var item in orderByDiagonal)
             {
                 Console.WriteLine(item);
             }
-            
+
         }
-        public static void OrderByLastName(this IEnumerable<Student> student)
+        public static void OrderByLastName(this IEnumerable<Laptop> laptops)
         {
-            var orderByLastName = student.OrderBy(x => x.LastName).ToList();
-            foreach (var item in orderByLastName)
+            var orderByRAM = laptops.OrderBy(x => x.RAM).ToList();
+            foreach (var item in orderByRAM)
             {
                 Console.WriteLine(item);
             }

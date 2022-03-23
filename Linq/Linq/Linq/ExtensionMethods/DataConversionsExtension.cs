@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 
 namespace Linq.ExtensionMethods
 {
-   public static class DataConversionsExtension
+    public static class DataConversionsExtension
     {
-        public static Dictionary<string,string> ConvertToDictionaryWithID(this IEnumerable<Faculty> faculty)
+        public static Dictionary<string, string> ConvertToDictionaryWithID(this IEnumerable<Manufacturer> manufacturer)
         {
-            return faculty.ToDictionary(x => x.Id, x => x.Name);
+            return manufacturer.ToDictionary(x => x.Id, x => x.Name);
         }
-        public static Dictionary<string, string> ConvertToDictionaryWithHeadMaster(this IEnumerable<Faculty> faculty)
+        public static Dictionary<string, string> ConvertToDictionaryWithCEO(this IEnumerable<Manufacturer> manufacturer)
         {
-            return faculty.ToDictionary(x => x.Name, x => x.HeadMaster);
+            return manufacturer.ToDictionary(x => x.Name, x => x.CEO);
         }
 
     }
+
 }

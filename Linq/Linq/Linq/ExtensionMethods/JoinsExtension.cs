@@ -9,16 +9,17 @@ namespace Linq.ExtensionMethods
 {
     public static class JoinsExtension
     {
-        public static void JoinStudentAndHeadMaster(IEnumerable<Student> _student,IEnumerable<Faculty> _faculty)
+
+        public static void JoinLaptopAndManufacturer(IEnumerable<Laptop> laptops, IEnumerable<Manufacturer> manufacturers)
         {
 
-            var joinResult = _student.Join(_faculty,
-                    student => student.FacultyId,
-                    faculty => faculty.Id,
-                    (student, faculty) => new
+            var joinResult = laptops.Join(manufacturers,
+                    laptop => laptop.ManufacturerID,
+                    manufacturer => manufacturer.Id,
+                    (laptop, manufacturer) => new
                     {
-                        StudentName = student.FirstName,
-                        StudentHeadmaster = faculty.HeadMaster,
+                        LaptopName = laptop.Name,
+                        ManufacturerName = manufacturer.Name,
                     }
 
                 );
@@ -28,16 +29,16 @@ namespace Linq.ExtensionMethods
             }
         }
 
-        public static void JoinStudentAndFacultyName(IEnumerable<Student> _student, IEnumerable<Faculty> _faculty)
+        public static void JoinLaptopAndCEO(IEnumerable<Laptop> laptops, IEnumerable<Manufacturer> manufacturers)
         {
 
-            var joinResult = _student.Join(_faculty,
-                    student => student.FacultyId,
-                    faculty => faculty.Id,
-                    (student, faculty) => new
+            var joinResult = laptops.Join(manufacturers,
+                    laptop => laptop.ManufacturerID,
+                    manufacturer => manufacturer.Id,
+                    (laptop, manufacturer) => new
                     {
-                        StudentName = student.LastName,
-                        Faculty = faculty.Name,
+                        LaptopName = laptop.Name,
+                        ManufacturerName = manufacturer.CEO,
                     }
 
                 );
@@ -46,5 +47,6 @@ namespace Linq.ExtensionMethods
                 Console.WriteLine(item);
             }
         }
+
     }
 }

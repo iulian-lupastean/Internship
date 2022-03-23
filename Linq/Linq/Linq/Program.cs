@@ -1,6 +1,19 @@
-﻿using Linq.ExtensionMethods;
+﻿//using Linq.ExtensionMethods;
 using LinqLesson;
-
+using Linq.FilteringOperators;
+using Linq.AggregationMethods;
+using Linq.ConversionMethods;
+using System.Collections;
+using Linq.ElementOperators;
+using Linq.GenerationMethods;
+using Linq.Grouping;
+using Linq.Joins;
+using Linq.Ordering;
+using Linq.ProjectionOperators;
+using System.Linq;
+using Linq.Quantifiers;
+using Linq.SetOperators;
+using Linq.ExtensionMethods;
 namespace LinqAssignment
 {
     public static class LinqAssignment
@@ -8,122 +21,244 @@ namespace LinqAssignment
 
         static void Main(string[] args)
         {
+            #region AGGREGATION METHODS
+            //AGGREGATION METHODS
 
-            //OrderByExtension.OrderByFirstName(_students);
-            //Console.WriteLine();
-            //OrderByExtension.OrderByLastName(_students);
+            //Count
+            // AggregationMethods.CountLaptopsWithSSD(_laptops);
 
-            // ConvertTo Dict Extension
-            /* 
-            var dict1 = DataConversionsExtension.ConvertToDictionaryWithID(_faculties);
-            foreach (var item in dict1)
+            //Max
+            //  AggregationMethods.MaxDiagonalLength(_laptops);
+
+            //Average Price
+            //  AggregationMethods.AveragePrice(_laptops);
+
+            //Aggregate
+            //  AggregationMethods.AllManufacturers(_manufacturers);
+            #endregion
+
+            #region CONVERSION METHODS
+            //CONVERSION METHODS
+
+            //OfType
+            // ConversionMethods.GetMacBooks(_laptops);
+
+            //Cast ToList
+            //  ConversionMethods.CastToList(_laptops);
+
+            //Cast ToArray
+            //  ConversionMethods.CastAsArray(_manufacturers);
+
+            //ToDictionary
+            // ConversionMethods.ConvertToDictionary(_manufacturers);
+
+            //ToLookUp
+            // ConversionMethods.ConvertToLookUp(_laptops);
+
+            //AsEnumerable
+            //  int[] array = new int[] { 1, 2, 4, 5, 6 };
+            // ConversionMethods.ConvertToAsEnumerable(array);
+
+            //AsQueryable
+            //ConversionMethods.ConvertToAsQueryable(_laptops);
+            #endregion
+
+            #region ELEMENT OPERATORS
+            //ELEMENT OPERATORS
+
+            //FirstOrDefault 
+            // ElementOperators.FirstOrDefault(_laptops);
+
+            //LastOrDefault
+            //  ElementOperators.LastOrDefault(_laptops);
+
+            //SingleOrDefault
+            // ElementOperators.SingleOrDefault(_laptops);
+
+            //ElementAtOrDefault
+            //  ElementOperators.ElementAtOrDefault(_laptops);
+
+            //DefaultIfEmpty
+            // ElementOperators.DefautIfEmpty(_laptops);
+            #endregion
+
+            #region FILTERING OPERATORS
+            //FILTERING OPERATORS
+
+            //Where
+            // FilteringOperators.SelectWhere(_laptops);
+
+            //Take and Skip
+            // FilteringOperators.TakeThenSkip(_laptops);
+
+            //TakeWHile
+            // FilteringOperators.TakeLaptopsWhile(_laptops);
+
+            //SkipWhile
+            //  FilteringOperators.SkipLaptopsWhile(_laptops);
+
+            //Distinct 
+            //FilteringOperators.Distinct(_laptops);
+            #endregion
+
+            #region GENERATION METHODS
+            //Empty 
+            // IEnumerable<Tablet> _tablets = GenerationMethods.GenerateEmptyTabletList();
+
+            //Repeat
+            // GenerationMethods.RepeatStringNTimes("Alea Acta Est", 10);
+
+            //Range
+            // GenerationMethods.Range(18, 30);
+
+            #endregion
+
+            #region GROUPING
+            // Grouping.GroupByCapacity(_laptops);
+            #endregion
+
+            #region Joins
+            //Join
+            //Joins.AvailableLaptopsFromManufacturers(_laptops, _manufacturers);
+
+            //GroupJoin
+            // Joins.AvailableLaptopsFromManufacturersByID(_laptops, _manufacturers);
+
+            //Zip
+            // int[] arabic = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            // string[] roman = new string[] { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X" };
+            // Joins.Zipp(roman, arabic);
+            #endregion
+
+            #region ORDERING
+            //OrderBy ThenBy ASC
+            // Ordering.OrderByCapacityThenByRAMAsc(_laptops);
+
+            //OrderBy ThenBy DESC
+            /*
+            var ordered = Ordering.OrderByPriceThenByFrequencyDesc(_laptops);
+            foreach (var item in ordered)
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine();
-            var dict2 = DataConversionsExtension.ConvertToDictionaryWithHeadMaster(_faculties);
-            foreach (var item in dict2)
+
+            //Reverse 
+            var reversed = Ordering.ReversedList(ordered);
+            foreach (var item in reversed)
             {
                 Console.WriteLine(item);
             }
             */
-            JoinsExtension.JoinStudentAndHeadMaster(_students, _faculties);
-            Console.WriteLine();
+            #endregion
 
-            JoinsExtension.JoinStudentAndFacultyName(_students, _faculties);
+            #region PROJECTION OPERATORS
 
+            //Select
+            // ProjectionOperators.SelectName(_laptops);
 
-        }
-
-        public static void SetOperations()
-        {
-            // Distinct
-            var distinctStudents = _students.GroupBy(student => new { student.FirstName })
-                .Select(student => student.First()).ToList();
-            var distinctStud = _students.DistinctBy(student => student.FirstName);
-            foreach (var student in distinctStud)
+            //SelectMany
+            /*
+            int[][] matrix = new int[][]
             {
-                // Console.WriteLine(student);
+                new [] {1,2,3},
+                new [] {4,3,4,5,2},
+                new [] {5,6,7,8,9}
+            };
+            ProjectionOperators.SelectMany(matrix);
+            */
+
+            #endregion
+
+            #region Quantifiers
+            //Contains
+            // Laptop laptop = new Laptop { Name = "Laptop ASUS Gaming ASUS TUF F15", Price = 2999.99, ProcesorFrequency = 2.5, RAM = 8, Capacity = 512, ScreenDiagonal = 15.6, ManufacturerID = "FX506LH-HN004", HasSSD = true };
+            //Quantifiers.CheckIfContains(_laptops, laptop);
+
+
+            //Any
+            /*
+            if (Quantifiers.MacBooksInStock(_laptops))
+            {
+                Console.WriteLine("There are MackBooks in stock");
             }
+            */
+
+            //All
+            /*
+            if (Quantifiers.AllLaptopHasSSD(_laptops))
+            {
+                Console.WriteLine("All laptops have SSD");
+            }
+            else { Console.WriteLine("Not all laptops have SSD"); }
+            */
+
+            //SequenceEmpty
+            // Quantifiers.IsListEmpty(_laptops);
+
+            #endregion
+
+            #region SET OPERATORS
+            //Concat
+            // SetOperators.ConcatenateLists(_laptops, _onsale);
+
+            //Union
+            //SetOperators.UniteLists(_laptops, _onsale);
+
+            //Intersect
+            //SetOperators.OnSaleRemainingStock(_onsale, _laptops);
 
             //Except
-            var exceptStudents = _students.Where(student => _faculties.Any(faculty => faculty.Id == student.FacultyId && faculty.HeadMaster == "Mike Tyson")).ToList();
-            foreach (var exceptStudent in exceptStudents)
-            {
-                //   Console.WriteLine(exceptStudent);
-            }
-
-            var joinResult = _students.Join(_faculties,
-                    student => student.FacultyId,
-                    faculty => faculty.Id,
-                    (student, faculty) => new
-                    {
-                        StudentName = student.FirstName,
-                        StudentHeadmaster = faculty.HeadMaster,
-                    }
-
-                );
-            foreach (var student in joinResult)
-            {
-                //Console.WriteLine(student);
-            }
-
+            //SetOperators.OnSaleOutofStock(_laptops, _onsale);
+            #endregion
 
         }
-        public static void DataConversion()
+
+        private static readonly IEnumerable<Laptop> _laptops = CreateLaptopsList();
+
+        private static IEnumerable<Laptop> CreateLaptopsList()
         {
-            var facultyDictionary = _faculties.ToDictionary(faculty => faculty.Id, faculty => faculty.Name);
-            foreach (var faculty in facultyDictionary)
+            return new List<Laptop>
             {
-                Console.WriteLine(faculty);
-            }
-        }
-
-
-        public static void ElementOperators()
-        {
-            Console.WriteLine("{0}", _students.First());
-        }
-
-
-
-
-        private static readonly IEnumerable<Student> _students = CreateStudentsList();
-        private static IEnumerable<Student> CreateStudentsList()
-        {
-            return new List<Student>
-            {
-                new Student { FirstName = "Jon", LastName = "Snow", Year = 2, HasAPartTimeJob = false, Age = 20, FacultyId = "1"},
-                new Student { FirstName = "Mark", LastName = "Twain", Year = 2, HasAPartTimeJob = false , Age = 21, FacultyId = "1"},
-                new Student { FirstName = "Cristiano", LastName = "Ronaldo", Year = 3, HasAPartTimeJob = false, Age = 21 , FacultyId = "4"},
-                new Student { FirstName = "Steve", LastName = "Jobs", Year = 4, HasAPartTimeJob = true, Age = 18, FacultyId = "3" },
-                new Student { FirstName = "Adam", LastName = "Einstein", Year = 2, HasAPartTimeJob = true, Age = 19, FacultyId = "3"},
-                new Student { FirstName = "Maia", LastName = "Sandu", Year = 2, HasAPartTimeJob = true , Age = 24, FacultyId = "2"},
-                new Student { FirstName = "Radu", LastName = "Popescu", Year = 2, HasAPartTimeJob = true , Age = 25, FacultyId = "2"},
-                new HomeStudent { FirstName = "Adam", LastName = "Gontier", Year = 3, HasAPartTimeJob = false, Address = "Selimbar, Sibiu, Ana Aslan 11", Age = 29, FacultyId = "1"},
-                new HomeStudent { FirstName = "Bill", LastName = "Gates", Year = 3, HasAPartTimeJob = false, Address = "Timisoara, Strada Victoria", Age = 19, FacultyId = "5"},
-                new Student { FirstName = "Winston", LastName = "Churchill", Year = 1, HasAPartTimeJob = true, Age = 30 , FacultyId = "4"},
-                new Student { FirstName = "Matei", LastName = "Basarab", Year = 1, HasAPartTimeJob = false , Age = 22, FacultyId = "5"},
-                new Student { FirstName = "Radu", LastName = "Stati", Year = 2, HasAPartTimeJob = true , Age = 25, FacultyId = "2"},
-                new Student { FirstName = "Radu", LastName = "Stati", Year = 2, HasAPartTimeJob = true , Age = 25, FacultyId = "9"},
+                new Laptop {Name="Laptop ASUS Gaming ASUS TUF F15",Price=2999.99,ProcesorFrequency=2.5,RAM=8,Capacity=512,ScreenDiagonal=15.6,ManufacturerID="FX506LH-HN004",HasSSD=true},
+                new Laptop {Name="Laptop ASUS Gaming ASUS TUF A15",Price=3298.99,ProcesorFrequency=3.3,RAM=8,Capacity=512,ScreenDiagonal=15.6,ManufacturerID="FX506LH-HN004",HasSSD=true},
+                new Laptop {Name="Laptop Lenovo Gaming IdeaPad 3",Price=3199.99,ProcesorFrequency=3.3,RAM=8,Capacity=256,ScreenDiagonal=15.6,ManufacturerID="82K2007ARM",HasSSD=true},
+                new Laptop {Name="Laptop Lenovo Gaming Legion 5",Price=3999.99,ProcesorFrequency=2.5,RAM=8,Capacity=512,ScreenDiagonal=15.6,ManufacturerID="82K2007ARM",HasSSD=false},
+                new Laptop {Name="Laptop Lenovo Gaming Legion S7",Price=5799.99,ProcesorFrequency=3.3,RAM=16,Capacity=512,ScreenDiagonal=15.6,ManufacturerID="82K2007ARM",HasSSD=true},
+                new Laptop {Name="Laptop Acer Gaming Nitro 5",Price=3399.99,ProcesorFrequency=2.5,RAM=8,Capacity=512,ScreenDiagonal=15.6,ManufacturerID="NH.QB0EX.001",HasSSD=false},
+                new Laptop {Name="Laptop GIGABYTE Gaming G7 KC",Price=7199.99,ProcesorFrequency=2.2,RAM=2,Capacity=512,ScreenDiagonal=17.3,ManufacturerID="G7 KC-8EE1130SH",HasSSD=true},
+                new MacBook {Name="Laptop Apple MacBook Air 13",Price=4699.99,AppleProcesor="Apple M1 chip (8-core CPU)",RAM=8,Capacity=256,ScreenDiagonal=13.3,ManufacturerID="MGND3ZE/A",HasSSD=false},
             };
         }
 
-        private static readonly IEnumerable<Faculty> _faculties = CreateFacultiesList();
-        private static IEnumerable<Faculty> CreateFacultiesList()
+        private static readonly IEnumerable<Laptop> _onsale = CreateOnSaleList();
+        private static IEnumerable<Laptop> CreateOnSaleList()
         {
-            return new List<Faculty>
+            return new List<Laptop>
             {
-                new Faculty { Name = "IT", Id = "1", HeadMaster = "Mike Tyson",
-                    Students = new List<Student> { new Student() { FirstName = "s1" }, new Student { FirstName = "s2"} } },
-                new Faculty { Name = "Marketing", Id = "2", HeadMaster = "Jonas Renkse",
-                    Students = new List<Student> { new Student() { FirstName = "s3" }, new Student { FirstName = "s4"} } },
-                new Faculty { Name = "Economy", Id = "3", HeadMaster = "Mark Zukerberg",
-                    Students = new List<Student> { new Student() { FirstName = "s5" }, new Student { FirstName = "s6"} }},
-                new Faculty { Name = "Math", Id = "4", HeadMaster = "Alfred Nobel" },
-                new Faculty { Name = "Agriculture", Id = "5", HeadMaster = "Ned Stark" },
+
+                new Laptop {Name="Laptop Lenovo Gaming Legion S7",Price=5799.99,ProcesorFrequency=3.3,RAM=16,Capacity=512,ScreenDiagonal=15.6,ManufacturerID="82K2007ARM",HasSSD=true},
+                new Laptop {Name="Laptop Acer Gaming Nitro 5",Price=3399.99,ProcesorFrequency=2.5,RAM=8,Capacity=512,ScreenDiagonal=15.6,ManufacturerID="NH.QB0EX.001",HasSSD=false},
+                new Laptop {Name="Laptop GIGABYTE Gaming G7 KC",Price=6199.99,ProcesorFrequency=2.5,RAM=2,Capacity=512,ScreenDiagonal=17.3,ManufacturerID="G7 KC-8EE1130SH",HasSSD=false},
+
             };
         }
+        public static IEnumerable<Manufacturer> _manufacturers = CreteManufacturersList();
+        private static IEnumerable<Manufacturer> CreteManufacturersList()
+        {
+            return new List<Manufacturer>{
+                new Manufacturer { Id = "FX506LH-HN004", Name = "ASUS", CEO = "Jonney Shih",
+                    Laptops = new List<Laptop> { new Laptop() { Name = "TUF15" }, new Laptop() { Name = "A15" } } },
+                new Manufacturer { Id = "82K2007ARM",Name="Lenovo",CEO="Yang Yuanqing",
+                    Laptops=new List<Laptop> { new Laptop() { Name ="IdeaPad3"}, new Laptop() { Name ="Legion 5"},new Laptop() { Name ="Legion S7"} }},
+                new Manufacturer { Id ="NH.QB0EX.001",Name="Acer",CEO="Jason Chen",
+                    Laptops= new List<Laptop> { new Laptop() { Name ="Nitro 5"} } },
+                new Manufacturer { Id ="G7 KC-8EE1130SH",Name="GIGABYTE",CEO="Ming-Hsiung Liu ",
+                    Laptops=new List<Laptop>{ new Laptop() {Name="G7 KC"} } },
+                new Manufacturer{ Id ="MGND3ZE/A",Name="Apple",CEO="Tim Cook",
+                    Laptops=new List<Laptop>{ new Laptop() { Name="Macbook Air 13"} } },
+            };
+        }
+
     }
 
 
