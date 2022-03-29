@@ -10,12 +10,18 @@ namespace ExceptionsAndDebbuging
             Category<string> category = new Category<string>();
             category.SetItem(0, "ex1");
             category.SetItem(1, "ex2");
-
+            int index1 = -1;
+            int index2 = 5;
             Console.WriteLine(category.GetItem(0));
             try
             {
-                ValidateIndex(-1);
-                category.Swap(0, -1);
+                if (index1 < 0)
+                {
+                    throw new IndexIsNegativeException(index1);
+                }
+                else if (index2 < 0)
+                { throw new IndexIsNegativeException(index2); }
+                category.Swap(index1, index2);
 
             }
             catch (ArgumentNullException ex)
@@ -36,13 +42,6 @@ namespace ExceptionsAndDebbuging
                 Console.WriteLine(ex.Message);
             }
             //Console.WriteLine(category.GetItem(0));
-        }
-        public static void ValidateIndex(int index)
-        {
-            if (index < 0)
-            {
-                throw new IndexIsNegativeException(index);
-            }
         }
 
     }
@@ -69,14 +68,12 @@ namespace ExceptionsAndDebbuging
         public void Swap(int index1, int index2)
         {
             (list[index1], list[index2]) = (list[index2], list[index1]);
-
         }
 
     }
     public class IndexIsNegativeException : Exception
     {
-        public IndexIsNegativeException() { }
-        public IndexIsNegativeException(int index) : base(String.Format("The index is negative {0}", index)) { }
+        public IndexIsNegativeException(int index) : base($"The index is negative {index}") { }
     }
 
 
