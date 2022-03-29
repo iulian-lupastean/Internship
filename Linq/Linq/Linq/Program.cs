@@ -21,195 +21,20 @@ namespace LinqAssignment
 
         static void Main(string[] args)
         {
-            #region AGGREGATION METHODS
-            //AGGREGATION METHODS
 
-            //Count
-            // AggregationMethods.CountLaptopsWithSSD(_laptops);
-
-            //Max
-            //  AggregationMethods.MaxDiagonalLength(_laptops);
-
-            //Average Price
-            //  AggregationMethods.AveragePrice(_laptops);
-
-            //Aggregate
-            //  AggregationMethods.AllManufacturers(_manufacturers);
-            #endregion
-
-            #region CONVERSION METHODS
-            //CONVERSION METHODS
-
-            //OfType
-            // ConversionMethods.GetMacBooks(_laptops);
-
-            //Cast ToList
-            //  ConversionMethods.CastToList(_laptops);
-
-            //Cast ToArray
-            //  ConversionMethods.CastAsArray(_manufacturers);
-
-            //ToDictionary
-            // ConversionMethods.ConvertToDictionary(_manufacturers);
-
-            //ToLookUp
-            // ConversionMethods.ConvertToLookUp(_laptops);
-
-            //AsEnumerable
-            //  int[] array = new int[] { 1, 2, 4, 5, 6 };
-            // ConversionMethods.ConvertToAsEnumerable(array);
-
-            //AsQueryable
-            //ConversionMethods.ConvertToAsQueryable(_laptops);
-            #endregion
-
-            #region ELEMENT OPERATORS
-            //ELEMENT OPERATORS
-
-            //FirstOrDefault 
-            // ElementOperators.FirstOrDefault(_laptops);
-
-            //LastOrDefault
-            //  ElementOperators.LastOrDefault(_laptops);
-
-            //SingleOrDefault
-            // ElementOperators.SingleOrDefault(_laptops);
-
-            //ElementAtOrDefault
-            //  ElementOperators.ElementAtOrDefault(_laptops);
-
-            //DefaultIfEmpty
-            // ElementOperators.DefautIfEmpty(_laptops);
-            #endregion
-
-            #region FILTERING OPERATORS
-            //FILTERING OPERATORS
-
-            //Where
-            // FilteringOperators.SelectWhere(_laptops);
-
-            //Take and Skip
-            // FilteringOperators.TakeThenSkip(_laptops);
-
-            //TakeWHile
-            // FilteringOperators.TakeLaptopsWhile(_laptops);
-
-            //SkipWhile
-            //  FilteringOperators.SkipLaptopsWhile(_laptops);
-
-            //Distinct 
-            //FilteringOperators.Distinct(_laptops);
-            #endregion
-
-            #region GENERATION METHODS
-            //Empty 
-            // IEnumerable<Tablet> _tablets = GenerationMethods.GenerateEmptyTabletList();
-
-            //Repeat
-            // GenerationMethods.RepeatStringNTimes("Alea Acta Est", 10);
-
-            //Range
-            // GenerationMethods.Range(18, 30);
-
-            #endregion
-
-            #region GROUPING
-            // Grouping.GroupByCapacity(_laptops);
-            #endregion
-
-            #region Joins
-            //Join
-            //Joins.AvailableLaptopsFromManufacturers(_laptops, _manufacturers);
-
-            //GroupJoin
-            // Joins.AvailableLaptopsFromManufacturersByID(_laptops, _manufacturers);
-
-            //Zip
-            // int[] arabic = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            // string[] roman = new string[] { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X" };
-            // Joins.Zipp(roman, arabic);
-            #endregion
-
-            #region ORDERING
-            //OrderBy ThenBy ASC
-            // Ordering.OrderByCapacityThenByRAMAsc(_laptops);
-
-            //OrderBy ThenBy DESC
-            /*
-            var ordered = Ordering.OrderByPriceThenByFrequencyDesc(_laptops);
-            foreach (var item in ordered)
+            var innerJoin = _laptops.Join(_manufacturers,
+                laptop => laptop.ManufacturerID,
+                manufacturer => manufacturer.Id,
+                (laptop, manufacturer) => new
+                {
+                    manufacturerName = manufacturer.Name,
+                    laptopsName = laptop.Name,
+                    specificRAM = laptop.RAM
+                }).Where(x => x.specificRAM == 8 && x.manufacturerName == "ASUS").Select(x => x.laptopsName);
+            foreach (var item in innerJoin)
             {
                 Console.WriteLine(item);
             }
-
-            //Reverse 
-            var reversed = Ordering.ReversedList(ordered);
-            foreach (var item in reversed)
-            {
-                Console.WriteLine(item);
-            }
-            */
-            #endregion
-
-            #region PROJECTION OPERATORS
-
-            //Select
-            // ProjectionOperators.SelectName(_laptops);
-
-            //SelectMany
-            /*
-            int[][] matrix = new int[][]
-            {
-                new [] {1,2,3},
-                new [] {4,3,4,5,2},
-                new [] {5,6,7,8,9}
-            };
-            ProjectionOperators.SelectMany(matrix);
-            */
-
-            #endregion
-
-            #region Quantifiers
-            //Contains
-            // Laptop laptop = new Laptop { Name = "Laptop ASUS Gaming ASUS TUF F15", Price = 2999.99, ProcesorFrequency = 2.5, RAM = 8, Capacity = 512, ScreenDiagonal = 15.6, ManufacturerID = "FX506LH-HN004", HasSSD = true };
-            //Quantifiers.CheckIfContains(_laptops, laptop);
-
-
-            //Any
-            /*
-            if (Quantifiers.MacBooksInStock(_laptops))
-            {
-                Console.WriteLine("There are MackBooks in stock");
-            }
-            */
-
-            //All
-            /*
-            if (Quantifiers.AllLaptopHasSSD(_laptops))
-            {
-                Console.WriteLine("All laptops have SSD");
-            }
-            else { Console.WriteLine("Not all laptops have SSD"); }
-            */
-
-            //SequenceEmpty
-            // Quantifiers.IsListEmpty(_laptops);
-
-            #endregion
-
-            #region SET OPERATORS
-            //Concat
-            // SetOperators.ConcatenateLists(_laptops, _onsale);
-
-            //Union
-            //SetOperators.UniteLists(_laptops, _onsale);
-
-            //Intersect
-            //SetOperators.OnSaleRemainingStock(_onsale, _laptops);
-
-            //Except
-            //SetOperators.OnSaleOutofStock(_laptops, _onsale);
-            #endregion
 
         }
 

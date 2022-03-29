@@ -16,9 +16,10 @@ namespace Linq.Joins
                 manufacturer => manufacturer.Id,
                 (laptop, manufacturer) => new
                 {
-                    manufacturer = manufacturer.Name,
-                    laptopsAvailable = laptop.Name,
-                });
+                    manufacturerName = manufacturer.Name,
+                    laptopsName = laptop.Name,
+                    specificRAM = laptop.RAM
+                }).Where(x => x.specificRAM == 8 && x.manufacturerName == "ASUS").Select(x => x.laptopsName);
             foreach (var item in innerJoin)
             {
                 Console.WriteLine(item);

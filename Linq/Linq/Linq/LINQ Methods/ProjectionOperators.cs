@@ -26,5 +26,9 @@ namespace Linq.ProjectionOperators
             }
         }
 
+        public static void SelectNameWhereManufacturer(IEnumerable<Laptop> laptops, IEnumerable<Manufacturer> manufacturers)
+        {
+        }
+
     }
 }

@@ -25,10 +25,10 @@ namespace Linq.AggregationMethods
             Console.WriteLine($"The average price for our laptops is {laptops.Average(x => x.Price)}");
         }
 
-        public static void AllManufacturers(IEnumerable<Manufacturer> manufacturers)
+        public static void AllManufacturers(IEnumerable<Laptop> laptops)
         {
-            string allManufacturers = manufacturers.Aggregate("", (a, b) => a + " " + b.Name, allManufacturers => allManufacturers);
-            Console.WriteLine($"The list of manufacturers: {allManufacturers}");
+            string StockWorth = laptops.Aggregate(0, (a, b) => a + b.Price);
+            Console.WriteLine($"The list of manufacturers: {StockWorth}");
         }
     }
 }
