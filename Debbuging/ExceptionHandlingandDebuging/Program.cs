@@ -7,9 +7,19 @@ namespace ExceptionsAndDebbuging
         static void Main(string[] args)
         {
 #if DEBUG
+            var age = -11;
+            string name = "popescu";
             try
             {
-                var user = new User("popescu", -3);
+                if (unchecked(age != (int)age))
+                {
+                    throw new AgeIsNotIntegerException(age);
+                }
+                var user = new User(name, (int)age);
+            }
+            catch (AgeIsNotIntegerException ex)
+            {
+                Console.WriteLine(ex.Message);
             }
             catch (ArgumentNullException ex)
             {
@@ -21,43 +31,29 @@ namespace ExceptionsAndDebbuging
             }
             finally
             {
-                Console.WriteLine("This is an Argument OutOfRange Exception ");
-                Console.WriteLine();
+                // Nothing To release here
             }
 
-
-            try
-            {
-                var user = new User(null, 23);
-            }
-            catch (ArgumentNullException ex)
-            {
-                Console.WriteLine(ex);
-            }
-            catch (ArgumentOutOfRangeException ex)
-            {
-                Console.WriteLine(ex);
-            }
-            finally
-            {
-                Console.WriteLine("This is an Argument Null Exception ");
-            }
 
 #endif
         }
         class User
         {
-            public User(string userName,int age)
+            public User(string userName, int age)
             {
                 if (userName == null)
                     throw new ArgumentNullException(nameof(userName), "username is invalid!");
-                if (age < 0 || age > 120)
+                if (age < 0 || age > 100)
                     throw new ArgumentOutOfRangeException(nameof(age), "age is invalid");
                 UserName = userName;
                 Age = age;
             }
-            public string UserName { get;private set; }
-            public int Age { get;private set; }
+            public string UserName { get; private set; }
+            public int Age { get; private set; }
         }
+    }
+    public class AgeIsNotIntegerException : Exception
+    {
+        public AgeIsNotIntegerException(double age) : base($"Age is not integer {age}") { }
     }
 }

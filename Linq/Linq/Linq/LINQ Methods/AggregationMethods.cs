@@ -25,9 +25,9 @@ namespace Linq.AggregationMethods
             Console.WriteLine($"The average price for our laptops is {laptops.Average(x => x.Price)}");
         }
 
-        public static void AllManufacturers(IEnumerable<Laptop> laptops)
+        public static void AllManufacturers(IEnumerable<Manufacturer> manufacturers)
         {
-            string StockWorth = laptops.Aggregate(0, (a, b) => a + b.Price);
+            string StockWorth = manufacturers.Aggregate("", (a, b) => a + b.Name + ",");
             Console.WriteLine($"The list of manufacturers: {StockWorth}");
         }
     }

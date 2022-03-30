@@ -21,7 +21,7 @@ namespace LinqAssignment
 
         static void Main(string[] args)
         {
-
+            /*
             var innerJoin = _laptops.Join(_manufacturers,
                 laptop => laptop.ManufacturerID,
                 manufacturer => manufacturer.Id,
@@ -35,6 +35,9 @@ namespace LinqAssignment
             {
                 Console.WriteLine(item);
             }
+            */
+            //AggregationMethods.AllManufacturers(_manufacturers);
+            Joins.AvailableLaptopsFromManufacturersByID(_laptops, _manufacturers);
 
         }
 

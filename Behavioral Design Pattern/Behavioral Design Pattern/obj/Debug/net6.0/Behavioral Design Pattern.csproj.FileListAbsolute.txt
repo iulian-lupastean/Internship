@@ -1,0 +1,15 @@
+C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\Behavioral Design Pattern\bin\Debug\net6.0\Behavioral Design Pattern.exe
+C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\Behavioral Design Pattern\bin\Debug\net6.0\Behavioral Design Pattern.deps.json
+C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\Behavioral Design Pattern\bin\Debug\net6.0\Behavioral Design Pattern.runtimeconfig.json
+C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\Behavioral Design Pattern\bin\Debug\net6.0\Behavioral Design Pattern.dll
+C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\Behavioral Design Pattern\bin\Debug\net6.0\Behavioral Design Pattern.pdb
+C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\Behavioral Design Pattern\obj\Debug\net6.0\Behavioral Design Pattern.csproj.AssemblyReference.cache
+C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\Behavioral Design Pattern\obj\Debug\net6.0\Behavioral Design Pattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\Behavioral Design Pattern\obj\Debug\net6.0\Behavioral Design Pattern.AssemblyInfoInputs.cache
+C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\Behavioral Design Pattern\obj\Debug\net6.0\Behavioral Design Pattern.AssemblyInfo.cs
+C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\Behavioral Design Pattern\obj\Debug\net6.0\Behavioral Design Pattern.csproj.CoreCompileInputs.cache
+C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\Behavioral Design Pattern\obj\Debug\net6.0\Behavioral Design Pattern.dll
+C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\Behavioral Design Pattern\obj\Debug\net6.0\refint\Behavioral Design Pattern.dll
+C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\Behavioral Design Pattern\obj\Debug\net6.0\Behavioral Design Pattern.pdb
+C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\Behavioral Design Pattern\obj\Debug\net6.0\Behavioral Design Pattern.genruntimeconfig.cache
+C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\Behavioral Design Pattern\obj\Debug\net6.0\ref\Behavioral Design Pattern.dll

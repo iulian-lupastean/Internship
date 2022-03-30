@@ -1,10 +1,4 @@
 ﻿using LinqLesson;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Linq.Joins
 {
     public static class Joins
@@ -16,10 +10,10 @@ namespace Linq.Joins
                 manufacturer => manufacturer.Id,
                 (laptop, manufacturer) => new
                 {
+                    laptopName = laptop.Name,
                     manufacturerName = manufacturer.Name,
-                    laptopsName = laptop.Name,
-                    specificRAM = laptop.RAM
-                }).Where(x => x.specificRAM == 8 && x.manufacturerName == "ASUS").Select(x => x.laptopsName);
+                    laptopRAM = laptop.RAM
+                }).Where(x => x.laptopRAM == 8 && x.manufacturerName.Equals("ASUS")).Select(x => x.laptopName);
             foreach (var item in innerJoin)
             {
                 Console.WriteLine(item);
@@ -36,15 +30,16 @@ namespace Linq.Joins
                     laptopsAvailable = laptop,
                     manufacturer = manufacturer.Name,
 
-                });
+                }));
             foreach (var item in groupJoin)
             {
-                Console.WriteLine(item.manufacturer);
-                foreach (var pc in item.laptopsAvailable)
+                foreach (var pc in item)
                 {
-                    Console.WriteLine(pc.Name);
+                    Console.WriteLine(pc.Price);
                 }
             }
+
+
         }
         public static void Zipp(string[] str, int[] num)
         {
