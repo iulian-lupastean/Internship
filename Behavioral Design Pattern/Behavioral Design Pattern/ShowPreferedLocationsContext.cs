@@ -7,15 +7,15 @@
         {
             _strategy = strategy;
         }
-        public void ShowPreferedLocations(City city, IEnumerable<Location> locations)
+        public IEnumerable<Location> ShowPreferedLocations(City city, IEnumerable<Location> locations)
         {
             if (_strategy == null)
             {
-                Console.WriteLine("No strategy Selected");
+                return null;
             }
             else
             {
-                _strategy.ShowPreferedLocations(city, locations);
+                return _strategy.ShowPreferedLocations(city, locations);
             }
         }
     }

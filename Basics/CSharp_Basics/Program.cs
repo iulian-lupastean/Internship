@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using CSharp_Basics;
 namespace CSharpBasics
 {
-    internal class Program
+    public class Program
     {
         public static void Main(string[] args)
         {
@@ -23,8 +23,6 @@ namespace CSharpBasics
             {
                 pair.Value.isUsed();
             }
-
-
             Dictionary<int, Mouse> AllMyMouses = new Dictionary<int, Mouse>();
             AllMyMouses.Add(1, mouse1);
             AllMyMouses.Add(2, mouse2);
