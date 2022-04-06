@@ -4,6 +4,70 @@
     "C:\\Users\\ilupa\\Desktop\\Lucru\\Internship\\Behavioral Design Pattern\\BehavioralDesignPattern.NUnitTests\\BehavioralDesignPattern.NUnitTests.csproj": {}
   },
   "projects": {
+    "C:\\Users\\ilupa\\Desktop\\Lucru\\Internship\\Behavioral Design Pattern\\Behavioral Design Pattern\\Behavioral Design Pattern.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ilupa\\Desktop\\Lucru\\Internship\\Behavioral Design Pattern\\Behavioral Design Pattern\\Behavioral Design Pattern.csproj",
+        "projectName": "Behavioral Design Pattern",
+        "projectPath": "C:\\Users\\ilupa\\Desktop\\Lucru\\Internship\\Behavioral Design Pattern\\Behavioral Design Pattern\\Behavioral Design Pattern.csproj",
+        "packagesPath": "C:\\Users\\ilupa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ilupa\\Desktop\\Lucru\\Internship\\Behavioral Design Pattern\\Behavioral Design Pattern\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ilupa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Moq": {
+              "target": "Package",
+              "version": "[4.17.2, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\ilupa\\Desktop\\Lucru\\Internship\\Behavioral Design Pattern\\BehavioralDesignPattern.NUnitTests\\BehavioralDesignPattern.NUnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +91,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\ilupa\\Desktop\\Lucru\\Internship\\Behavioral Design Pattern\\Behavioral Design Pattern\\Behavioral Design Pattern.csproj": {
+                "projectPath": "C:\\Users\\ilupa\\Desktop\\Lucru\\Internship\\Behavioral Design Pattern\\Behavioral Design Pattern\\Behavioral Design Pattern.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

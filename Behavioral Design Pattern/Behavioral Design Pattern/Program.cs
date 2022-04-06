@@ -8,23 +8,22 @@ namespace Behavioral_Design_Pattern
     {
         static void Main(string[] args)
         {
-            while (true)
+
+            Console.WriteLine("Select Prefered Cities! 1 -> Madrid; 2 -> Paris; 3 -> London");
+            var selectCity = int.Parse(Console.ReadLine());
+            if (selectCity == 1)
             {
-                Console.WriteLine("Select Prefered Cities! 1 -> Madrid; 2 -> Paris; 3 -> London");
-                var selectCity = int.Parse(Console.ReadLine());
-                if (selectCity == 1)
-                {
-                    LocationsForSelectedCities(_cities.OrderByDescending(x => x.Name == "Madrid").First());
-                }
-                if (selectCity == 2)
-                {
-                    LocationsForSelectedCities(_cities.OrderByDescending(x => x.Name == "Paris").First());
-                }
-                if (selectCity == 3)
-                {
-                    LocationsForSelectedCities(_cities.OrderByDescending(x => x.Name == "London").First());
-                }
+                LocationsForSelectedCities(_cities.OrderByDescending(x => x.Name == "Madrid").First());
             }
+            if (selectCity == 2)
+            {
+                LocationsForSelectedCities(_cities.OrderByDescending(x => x.Name == "Paris").First());
+            }
+            if (selectCity == 3)
+            {
+                LocationsForSelectedCities(_cities.OrderByDescending(x => x.Name == "London").First());
+            }
+
 
 
         }
@@ -82,6 +81,7 @@ namespace Behavioral_Design_Pattern
             }
             Console.WriteLine();
         }
+
 
     }
 
