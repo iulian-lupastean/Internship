@@ -1,0 +1,15 @@
+C:\Users\ilupa\Desktop\Lucru\Internship\File System and Streams\File System and Streams\File System and Streams\bin\Debug\net6.0\File System and Streams.exe
+C:\Users\ilupa\Desktop\Lucru\Internship\File System and Streams\File System and Streams\File System and Streams\bin\Debug\net6.0\File System and Streams.deps.json
+C:\Users\ilupa\Desktop\Lucru\Internship\File System and Streams\File System and Streams\File System and Streams\bin\Debug\net6.0\File System and Streams.runtimeconfig.json
+C:\Users\ilupa\Desktop\Lucru\Internship\File System and Streams\File System and Streams\File System and Streams\bin\Debug\net6.0\File System and Streams.dll
+C:\Users\ilupa\Desktop\Lucru\Internship\File System and Streams\File System and Streams\File System and Streams\bin\Debug\net6.0\File System and Streams.pdb
+C:\Users\ilupa\Desktop\Lucru\Internship\File System and Streams\File System and Streams\File System and Streams\obj\Debug\net6.0\File System and Streams.csproj.AssemblyReference.cache
+C:\Users\ilupa\Desktop\Lucru\Internship\File System and Streams\File System and Streams\File System and Streams\obj\Debug\net6.0\File System and Streams.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ilupa\Desktop\Lucru\Internship\File System and Streams\File System and Streams\File System and Streams\obj\Debug\net6.0\File System and Streams.AssemblyInfoInputs.cache
+C:\Users\ilupa\Desktop\Lucru\Internship\File System and Streams\File System and Streams\File System and Streams\obj\Debug\net6.0\File System and Streams.AssemblyInfo.cs
+C:\Users\ilupa\Desktop\Lucru\Internship\File System and Streams\File System and Streams\File System and Streams\obj\Debug\net6.0\File System and Streams.csproj.CoreCompileInputs.cache
+C:\Users\ilupa\Desktop\Lucru\Internship\File System and Streams\File System and Streams\File System and Streams\obj\Debug\net6.0\File System and Streams.dll
+C:\Users\ilupa\Desktop\Lucru\Internship\File System and Streams\File System and Streams\File System and Streams\obj\Debug\net6.0\refint\File System and Streams.dll
+C:\Users\ilupa\Desktop\Lucru\Internship\File System and Streams\File System and Streams\File System and Streams\obj\Debug\net6.0\File System and Streams.pdb
+C:\Users\ilupa\Desktop\Lucru\Internship\File System and Streams\File System and Streams\File System and Streams\obj\Debug\net6.0\File System and Streams.genruntimeconfig.cache
+C:\Users\ilupa\Desktop\Lucru\Internship\File System and Streams\File System and Streams\File System and Streams\obj\Debug\net6.0\ref\File System and Streams.dll

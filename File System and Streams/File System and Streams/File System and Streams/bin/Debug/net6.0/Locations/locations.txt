@@ -1,0 +1,3 @@
+The Location Museum1 is a Museum found at Museum1Address and the visit price is 14.99
+The Location Park1 is a Park found at Park1Address and the visit price is 0
+The Location MemorialHouse1 is a MemorialHouse found at MemorialHouse1Address and the visit price is 19.99

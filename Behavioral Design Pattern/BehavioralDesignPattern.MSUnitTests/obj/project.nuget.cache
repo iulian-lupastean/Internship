@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Bfn+4rueF9Vbvq0RnGNpS0ET7K7/TdJJXWI9fz5hhCzRzyuLmdSL0V9Lsujjw/bU1GNCGit1alpnQI0W2WP3PQ==",
+  "dgSpecHash": "1ThDyyIpO91J0THEX29IRbo7tbnwm3GIXlxpaRDqJV+KiuwpXyEHGCjiJqHw2fO4U/G1eEceOdyKQEIvI2/S0w==",
   "success": true,
   "projectFilePath": "C:\\Users\\ilupa\\Desktop\\Lucru\\Internship\\Behavioral Design Pattern\\BehavioralDesignPattern.MSUnitTests\\BehavioralDesignPattern.MSUnitTests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ilupa\\.nuget\\packages\\autofixture\\4.17.0\\autofixture.4.17.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
+    "C:\\Users\\ilupa\\.nuget\\packages\\fare\\2.1.1\\fare.2.1.1.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\microsoft.net.test.sdk\\16.11.0\\microsoft.net.test.sdk.16.11.0.nupkg.sha512",
@@ -48,6 +50,7 @@
     "C:\\Users\\ilupa\\.nuget\\packages\\system.collections.nongeneric\\4.3.0\\system.collections.nongeneric.4.3.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\system.collections.specialized\\4.3.0\\system.collections.specialized.4.3.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\ilupa\\.nuget\\packages\\system.componentmodel.annotations\\4.3.0\\system.componentmodel.annotations.4.3.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\system.componentmodel.primitives\\4.3.0\\system.componentmodel.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\system.componentmodel.typeconverter\\4.3.0\\system.componentmodel.typeconverter.4.3.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\system.console\\4.3.0\\system.console.4.3.0.nupkg.sha512",

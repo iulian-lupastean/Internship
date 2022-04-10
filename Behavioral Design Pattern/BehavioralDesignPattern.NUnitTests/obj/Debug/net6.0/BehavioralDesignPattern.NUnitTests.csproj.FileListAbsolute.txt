@@ -111,3 +111,5 @@ C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\BehavioralDesi
 C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\BehavioralDesignPattern.NUnitTests\bin\Debug\net6.0\Behavioral Design Pattern.pdb
 C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\BehavioralDesignPattern.NUnitTests\bin\Debug\net6.0\Castle.Core.dll
 C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\BehavioralDesignPattern.NUnitTests\bin\Debug\net6.0\Moq.dll
+C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\BehavioralDesignPattern.NUnitTests\bin\Debug\net6.0\AutoFixture.dll
+C:\Users\ilupa\Desktop\Lucru\Internship\Behavioral Design Pattern\BehavioralDesignPattern.NUnitTests\bin\Debug\net6.0\Fare.dll

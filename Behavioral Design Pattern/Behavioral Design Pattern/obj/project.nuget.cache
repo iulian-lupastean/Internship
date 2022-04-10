@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Wp8uNMb+NJhRTCS/xSOOqZdtBt6/Vg5cxhvbVzwGl2aTzUZKeQIKWzZXMKSdh1JPpFf/Oxt4ysoxTRvf4aG+0g==",
+  "dgSpecHash": "uRulXm85OwXDkWQ7LAIeh2tLlMUOsz2Y91InVxQEegAqcgN7zz31Jp4Xqsz2fki7sFwxlcCGJMpLsyiiqE2IyA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ilupa\\Desktop\\Lucru\\Internship\\Behavioral Design Pattern\\Behavioral Design Pattern\\Behavioral Design Pattern.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ilupa\\.nuget\\packages\\autofixture\\4.17.0\\autofixture.4.17.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
+    "C:\\Users\\ilupa\\.nuget\\packages\\fare\\2.1.1\\fare.2.1.1.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
@@ -38,6 +40,7 @@
     "C:\\Users\\ilupa\\.nuget\\packages\\system.collections.nongeneric\\4.3.0\\system.collections.nongeneric.4.3.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\system.collections.specialized\\4.3.0\\system.collections.specialized.4.3.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\ilupa\\.nuget\\packages\\system.componentmodel.annotations\\4.3.0\\system.componentmodel.annotations.4.3.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\system.componentmodel.primitives\\4.3.0\\system.componentmodel.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\system.componentmodel.typeconverter\\4.3.0\\system.componentmodel.typeconverter.4.3.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\system.console\\4.3.0\\system.console.4.3.0.nupkg.sha512",

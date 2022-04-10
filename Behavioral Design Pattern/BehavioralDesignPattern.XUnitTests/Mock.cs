@@ -1,6 +1,7 @@
 using Xunit;
 using Moq;
 using Autofac.Extras.Moq;
+using AutoFixture;
 using Behavioral_Design_Pattern;
 
 namespace BehavioralDesignPattern.XUnitTests
@@ -13,15 +14,8 @@ namespace BehavioralDesignPattern.XUnitTests
 
             using (var mock = AutoMock.GetLoose())
             {
-                var location = new Location
-                {
-                    ID = 125,
-                    Name = "Park3Madrid",
-                    City_ID = 1,
-                    Address = "Addresspark2Madrid",
-                    Price = 0,
-                    Type = "Park"
-                };
+                var fixture = new Fixture();
+                var location = fixture.Build<Location>().Create();
                 string sql = "INSERT INTO Locations(ID, Name,City_ID,Address,Price,Type) VALUES (ID,'Name',City_ID,'Address',Price,'Type')";
 
                 mock.Mock<IDataAccess>().Setup(x => x.SaveData(sql, location));

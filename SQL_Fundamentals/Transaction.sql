@@ -1,0 +1,22 @@
+use SQL_FUNDAMENTALS_ASSIGNMENT
+
+BEGIN TRY
+	BEGIN TRANSACTION
+	UPDATE Cities Set Contry ='Germany' where ID=10
+	UPDATE Locations Set Price = 10 Where ID = 108
+	UPDATE Travels Set Location_ID = 103 where ID = 5
+	DELETE FROM Travels WHERE ID = 9
+	IF @@ROWCOUNT = 0
+		THROW 51000, 'The record does not exist.', 1; 
+	DELETE FROM Users WHERE ID = 8
+		IF @@ROWCOUNT = 0
+			THROW 51000, 'The record does not exist.', 1; 
+	COMMIT TRANSACTION
+END TRY
+BEGIN CATCH
+	BEGIN
+		ROLLBACK TRANSACTION
+		PRINT 'NOT SUCCESFULL'
+	END
+END CATCH
+
