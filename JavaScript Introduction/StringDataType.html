@@ -1,0 +1,79 @@
+
+<html>
+    <body>
+    <script type="text/javascript">
+var singleQuotes = "Hello World";
+var doubleQuotes = "Hello World";
+var combined = "      We'll be there         ";
+var single = "We'll be there";
+
+//String Data Type Methods
+
+console.log(singleQuotes.length);
+//returneaza lungimea unui string
+
+console.log(doubleQuotes.slice(6));
+console.log(doubleQuotes.slice(-doubleQuotes.length, -6));
+// returneaza un string nou pe care il extrage din string-ul dat
+
+console.log(doubleQuotes.substring(0, 6));
+// similar cu slice doar ca nu poate primii index negativ
+
+console.log(doubleQuotes.substr(6, 5));
+// asemanator cu slice doar ca al 2-lea parametru indica lungimea substringului extras
+
+console.log(singleQuotes.replace("World", "Amdaris"));
+//inlocuieste doar primul match din string
+console.log(singleQuotes.replace(/WORLD/gi, "Amdaris"));
+// se adauga /i la sfarist pentru a nu fi case sensitive si /g pentru a se face schimbarile in tot stringul
+console.log(singleQuotes.toLowerCase()); //to upper
+console.log(singleQuotes.toUpperCase()); //to lower
+
+console.log(singleQuotes.substr(0, 5).concat(" ", single.slice(-5)));
+//concateneaza 2 stringuri
+
+console.log(combined.trim());
+// sterge whitespace-urile de la inceput si sfarsit
+
+console.log(doubleQuotes.padStart(5, "x"));
+// adauga padding la inceputul stringului
+
+console.log(doubleQuotes.padEnd(5, "x"));
+// adauga padding la sfarsitul stringului
+
+console.log(single.charAt(4));
+//returneaza caracterul aflat la indexul specificat
+
+console.log(single.charCodeAt(4));
+// returneaza codul UTF-16 pentru caracterul de la indexul specificat
+
+console.log(single.split(" "));
+//returneaza stringul ca un array de elemente separate la caracterul precizat
+
+console.log(single.codePointAt[1])
+// returneaza codul Unicode al caracterului de la indexul specificat
+
+console.log(single.endsWith("e",single.length))
+// returneaza true/false daca stringul se termina cu un string dat
+
+console.log(single.includes("We"))
+ // returneaza true / false daca stringul contine stringul dat
+
+ console.log(single.indexOf('l'))
+ // returneaza indexul unde se gaseste prima data in string caracterul dat (-1 daca nu se gaseste)
+
+ console.log(single.lastIndexOf('l'))
+ // returneaza indexul unde se gaseste ultima data in string caracterul dat (-1 daca nu se gaseste)
+
+ var regex = /[A-Z]/g;
+ console.log(single.match(regex))
+ // returneaza un array de caractere care indeplinesc conditiile din regex
+
+ console.log(single.normalize("NFKD"))
+// normalizeaza un string la  un Form de Unicode
+
+console.log(single.search("ll"))
+// returneaza indexul unde se gaseste prima data stringul in stringul dat
+    </script>
+</body>
+</html>

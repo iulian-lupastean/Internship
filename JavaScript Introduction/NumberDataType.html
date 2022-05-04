@@ -1,0 +1,34 @@
+<html>
+    <body>
+    <script type="text/javascript">
+//Number DataType
+//Mai exista si Infinity , -Infinity si NaN
+var positiveInt = 25;
+var negativeInt = -25;
+var positiveFloat = 22.5;
+var negativeFloat = -22.5;
+var bigExponential = 22.5e5;
+var smallExponential = 22.5e-5;
+
+//Number DataTypeMethods
+
+console.log(positiveInt.toString());
+//converteste nr in string
+console.log(positiveFloat.toExponential(4));
+// converteste nr intr-un exponential iar parametrul din paranteze indica numarul de caractere de dupa virgula
+
+console.log(positiveFloat.toFixed(2));
+console.log(negativeFloat.toFixed(0));
+// returneaza un string cu un nr predefinit de caractere dupa virgula
+
+console.log((positiveInt + negativeInt).valueOf());
+// folosit pentru a returna rezultatul ca si numar
+
+console.log(bigExponential.toPrecision(2))
+// returneaza numarul cu un nr predefinit de cifre
+// Diferenta intre toFixed si toPrecision este ca toFixed returneaza nr predefinit si incepe numaratoarea dupa virgula iar toFixed incepe numaratoarea inainte de virgula
+console.log(bigExponential.toPrecision(1))
+
+    </script>
+</body>
+</html>
